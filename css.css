@@ -1,0 +1,14 @@
+ul li{
+	list-style: none;
+}
+
+label{
+	display: inline-block;
+	width: 310px;
+	text-align: right;
+}
+
+#submit-btn{
+	position: absolute;
+	left: 292px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang = "us">
+
+	<head>
+		<meta charset = "utf-u8">
+
+		<meta name="description" content="forms">
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<link rel="stylesheet" href ="css.css">
+		<script type="text/javascript">
+				$(document).ready(function(){
+
+						
+						$("#submit-btn").click(function(){
+							
+							
+							var First_Name = $("#First_Name").val();
+							var Last_Name = $("#Last_Name").val();
+							var Email = $("#E-Mail").val();
+							var Contact = $("#Contact").val();
+
+							$("#users").append("<tr><td>" + First_Name +  "</td>" + "<td>" + Last_Name +  "</td>" + "<td>" + Email +  "<td>" + Contact +  "</td></tr>" );
+							// console.log("sfafdadfafaf");
+							$('form').trigger("reset");
+							return false;
+							// this.reset()
+						});
+				});
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>E-Mail Address</th>
+					<th>Contact#</th>
+				</tr>
+			</thead>
+			<tbody id="users">	
+			</tbody>
+		</table>
+		<h1>Add User</h1>
+		<hr>
+		<form>
+			<ul>
+				<li><label>First Name: <input id = "First_Name" type="text" name="First Name" placeholder="First Name"></label></li>
+				<li><label>Last Name: <input id = "Last_Name" type="text" name="Last Name" placeholder="Last Name"></label></li>
+				<li><label>E-Mail Address: <input id = "E-Mail" type="text" name="E-Mail Address" placeholder="Email"></label></li>
+				<li><label>Contact: <input id = "Contact" type="text" name="Contact" placeholder="Contact"></label></li>
+				
+			</ul>
+			<input type="submit" value="add user" id="submit-btn">
+	</body>
+</html>
